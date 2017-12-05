@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="10582" started-at="2017-12-05T08:42:13Z" finished-at="2017-12-05T08:42:23Z">
+  <suite name="Suite" duration-ms="8561" started-at="2017-12-05T08:59:27Z" finished-at="2017-12-05T08:59:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="10582" started-at="2017-12-05T08:42:13Z" finished-at="2017-12-05T08:42:23Z">
+    <test name="Test" duration-ms="8561" started-at="2017-12-05T08:59:27Z" finished-at="2017-12-05T08:59:36Z">
       <class name="com.opentext.wf.tests.WFSmokeTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="launchBrowser" is-config="true" duration-ms="7747" started-at="2017-12-05T14:12:13Z" finished-at="2017-12-05T14:12:21Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="launchBrowser" is-config="true" duration-ms="5994" started-at="2017-12-05T14:29:27Z" finished-at="2017-12-05T14:29:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="loginIntoWWA()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="loginIntoWWA" duration-ms="1928" started-at="2017-12-05T14:12:21Z" finished-at="2017-12-05T14:12:23Z">
+        <test-method status="PASS" signature="loginIntoWWA()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="loginIntoWWA" duration-ms="1676" started-at="2017-12-05T14:29:33Z" finished-at="2017-12-05T14:29:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIntoWWA -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="closeBrowser" is-config="true" duration-ms="890" started-at="2017-12-05T14:12:23Z" finished-at="2017-12-05T14:12:23Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.opentext.wf.tests.WFSmokeTest@6cc4c815]" name="closeBrowser" is-config="true" duration-ms="873" started-at="2017-12-05T14:29:35Z" finished-at="2017-12-05T14:29:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

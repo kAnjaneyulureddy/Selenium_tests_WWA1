@@ -5,9 +5,9 @@
     <classes>
       <class name="com.opentext.wf.tests.WFSmokeTest">
         <methods>
-          <include name="loginIntoWWA"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="OutboxView"/>
         </methods>
       </class> <!-- com.opentext.wf.tests.WFSmokeTest -->
     </classes>

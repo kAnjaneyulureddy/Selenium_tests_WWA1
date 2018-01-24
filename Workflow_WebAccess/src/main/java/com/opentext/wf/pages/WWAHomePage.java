@@ -12,11 +12,22 @@ public class WWAHomePage extends CommonPage{
 	@FindBy(id= "Image1")
 	WebElement WWAImage;
 	
-	/* @FindBy(xpath = "//*[@id=\"DataListCtrl_ctl04_ShortCutKey1_lblText\"]")
-	WebElement logoffImage;
 	
-	@FindBy(name="buttonAssign")
-	WebElement reassignButton; */
+	@FindBy(xpath= "//span[contains(text(),'Inbox')]")
+	WebElement InboxSpan;
+	
+	@FindBy(xpath="//span[contains(text(),'Outbox')]")
+	WebElement OutboxSpan;
+	
+	@FindBy(name="tpRight")
+	WebElement RightFrame;
+	
+	@FindBy(xpath="//span[contains(text(),'Inbox : Admin')]")
+	WebElement InboxTaskViewSpan;
+	
+	@FindBy(xpath="//span[contains(text(),'Outbox : Admin)]")
+	WebElement OutboxTaskViewSpan;
+	
 	
 	public WWAHomePage(WebDriver driver)
 	{
@@ -29,17 +40,31 @@ public class WWAHomePage extends CommonPage{
 		}
 	}
 	
-	/* public WWALoginPage logOffWWA()
+	public WWAHomePage InboxViewClick()
 	{
-	
-		logoffImage.click();
-		
-		return new WWALoginPage(this.driver);
+	   driver.switchTo().frame(RightFrame);
+	   //driver.switchTo().frame("tpRight");
+	   InboxSpan.click();
+	   return new WWAHomePage(this.driver);
+ 	  
+	}
+	public String InboxTaskViewSpanCheck()
+	{ 
+		String inboxTitleText = InboxTaskViewSpan.getText();
+		return inboxTitleText;		
 	}
 	
-	public WWAHomePage  reassignButtontest()
+	public WWAHomePage OutboxViewClick()
 	{
-		reassignButton.click();
+		driver.switchTo().frame(RightFrame);
+		OutboxSpan.click();
 		return new WWAHomePage(this.driver);
-	} */
+	}
+	
+	public String OutboxTaskViewSpanCheck()
+	{
+		String outboxTitleText = OutboxTaskViewSpan.getText();
+		return outboxTitleText;
+	}
+	
 }

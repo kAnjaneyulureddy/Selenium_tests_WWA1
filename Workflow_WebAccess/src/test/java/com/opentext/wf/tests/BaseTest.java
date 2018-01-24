@@ -27,12 +27,14 @@ public class BaseTest {
 		
 		String browserName = rp.getBrowser();
 		
+		System.out.println(browserName);
+		
 		driver = Browser.getDriverInstance(browserName);
 		driver.get(rp.getURL());
 		driver.manage().window().maximize();
 		
 		
-		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		try
 		{

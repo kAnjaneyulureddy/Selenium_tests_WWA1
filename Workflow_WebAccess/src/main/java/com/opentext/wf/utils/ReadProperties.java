@@ -67,6 +67,7 @@ public class ReadProperties {
 	
 	public String getBrowser()
 	{
+		System.out.println(props.getProperty("Browser"));
 		return props.getProperty("Browser");
 	}
 	

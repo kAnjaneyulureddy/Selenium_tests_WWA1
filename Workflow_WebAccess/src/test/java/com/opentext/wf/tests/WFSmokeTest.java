@@ -14,35 +14,33 @@ public class WFSmokeTest extends BaseTest{
 	private WWALoginPage loginPg;
 	private WWAHomePage homepg;
 	
-	@Test
+	@Test(priority=1)
 	public void loginIntoWWA()
 	{
 		loginPg = new WWALoginPage(driver);
-		
-		//homepg = loginPg.Login(testData.getTestUserName(), testData.getPassword());
-		
 		homepg = loginPg.Login("Admin", "");
-		// homepg = homepg.reassignButtontest();	
 		System.out.println("Workflow Docker Demo");
-	
-		
-		//Assert.assertTrue(driver.getTitle().contains("Captaris Workflow"));	
-		// Assert.assertTrue(ExpectedConditions.);;
+		Assert.assertEquals(driver.getTitle(), "Captaris Workflow", "In Login page");
 		
 	}
-	
-	/*@Test
-	public void logOffWWA()
+   	
+	@Test(priority=2)
+	public void InboxView()
 	{
-		loginPg = homepg.logOffWWA();
-	} */
-	
-	/* @Test
-		public void Reassignfun()
-	{
-	  homepg = homepg.reassignButtontest();	
+		homepg = homepg.InboxViewClick();
+		String InboxText = homepg.InboxTaskViewSpanCheck();
+		Assert.assertEquals(InboxText, "Inbox : Admin");
+							
 	}
-	*/
+	
+	@Test(priority=3)
+	public void OutboxView()
+	{
+		homepg = homepg.OutboxViewClick();
+		String OutboxText = homepg.OutboxTaskViewSpanCheck();
+		Assert.assertEquals(OutboxText, "Outbox : Admin");
+	}
+	
 	
 	
 

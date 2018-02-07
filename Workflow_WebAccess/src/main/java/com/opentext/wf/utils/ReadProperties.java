@@ -16,6 +16,7 @@ public class ReadProperties {
 	{
 		
 		System.out.println(System.getProperty("user.dir"));
+		
 		// System.setProperty("user.dir", WFConstants.WF_UI_TEST_PROPS_FILE_PATH_ENV_KEY);
 		// System.getenv("user.dir");
 		

@@ -27,6 +27,7 @@ public class BaseTest {
 		
 		String browserName = rp.getBrowser();
 		
+		
 		System.out.println(browserName);
 		
 		driver = Browser.getDriverInstance(browserName);

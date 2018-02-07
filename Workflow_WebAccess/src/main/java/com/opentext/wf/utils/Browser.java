@@ -15,6 +15,7 @@ public class Browser {
 	{
 		ReadProperties rp = ReadProperties.getReadPropertiesInstance();
 		
+		
 		switch(browserName)
 		{
 		case "IE":

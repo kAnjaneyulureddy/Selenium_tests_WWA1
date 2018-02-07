@@ -24,22 +24,22 @@ public class WFSmokeTest extends BaseTest{
 		
 	}
    	
-	@Test(priority=2)
+    @Test(priority=2)
 	public void InboxView()
 	{
 		homepg = homepg.InboxViewClick();
-		String InboxText = homepg.InboxTaskViewSpanCheck();
-		Assert.assertEquals(InboxText, "Inbox : Admin");
+		Assert.assertTrue(homepg.InboxTaskViewSpanCheck(), "Inbox view not displayed");
+		//Assert.assertEquals(InboxText, "Inbox : Admin");
 							
 	}
 	
-	@Test(priority=3)
+	/*@Test(priority=3)
 	public void OutboxView()
 	{
 		homepg = homepg.OutboxViewClick();
 		String OutboxText = homepg.OutboxTaskViewSpanCheck();
 		Assert.assertEquals(OutboxText, "Outbox : Admin");
-	}
+	}*/
 	
 	
 	

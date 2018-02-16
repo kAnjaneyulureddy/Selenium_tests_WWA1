@@ -1,5 +1,7 @@
 package com.opentext.wf.tests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,20 +30,69 @@ public class WFSmokeTest extends BaseTest{
 	public void InboxView()
 	{
 		homepg = homepg.InboxViewClick();
-		Assert.assertTrue(homepg.InboxTaskViewSpanCheck(), "Inbox view not displayed");
+		Assert.assertTrue(homepg.InboxTaskViewSpanCheck(), "Inbox task view is not displayed");
 		//Assert.assertEquals(InboxText, "Inbox : Admin");
 							
 	}
 	
-	/*@Test(priority=3)
+	@Test(priority=3)
 	public void OutboxView()
 	{
 		homepg = homepg.OutboxViewClick();
-		String OutboxText = homepg.OutboxTaskViewSpanCheck();
-		Assert.assertEquals(OutboxText, "Outbox : Admin");
-	}*/
+		Assert.assertTrue(homepg.OutboxTaskViewSpanCheck(), "Outbox task view is not displayed");
+	}
 	
+	@Test(priority=4)
+	public void OverdueView()
+	{
+		homepg = homepg.OverdueViewClick();
+		Assert.assertTrue(homepg.OverdueTaskViewSpanCheck(), "Overdue task view is not displayed");
+	}
+	
+	@Test(priority=5)
+	public void CompanyNameView()
+	{
+		homepg = homepg.CompanyNameViewClick();
+		Assert.assertTrue(homepg.CompanyNameViewSpanCheck(), "Company name view is not displayed");
+	}
+	@Test(priority=6)
+	public void WWAImageLoadCheck()
+	{
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Assert.assertTrue(homepg.WWAImageLoadcheck(), "Web Access Image not loaded");
+	}
+	
+	@Test(priority=7)
+	public void FolderListView()
+	{
+		homepg = homepg.FolderListViewClick();
+		Assert.assertTrue(homepg.FolderListLoadCheck(), "Folder List view is not displayed");
+	}
+	
+	@Test(priority=8)
+	public void CWFShortcutsView()
+	{
+		homepg = homepg.CWFShortcutsViewClick();
+		Assert.assertTrue(homepg.CWFShortCutsLoadCheck(), "Shortcuts span not loaded");
+	}
+	
+	@Test(priority=9)
+	public void DddShortcutsView()
+	{
+		homepg = homepg.DddShortuctsViewClick();
+		Assert.assertTrue(homepg.DddShortcutsLoadCheck(), "DDD shortcuts frame not loaded");
+		homepg = homepg.CWFShortcutsViewClick();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	@Test(priority=10)
+	public void LogoffCheck()
+	{
+		loginPg = homepg.logoff();
+		Assert.assertEquals(driver.getTitle(), "Login WebAccess", "Login page loaded");
+	}
+	
+}
 	
 	
 
-}

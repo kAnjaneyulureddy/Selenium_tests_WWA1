@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
-          <include name="InboxView"/>
+          <include name="LogoffCheck"/>
         </methods>
       </class> <!-- com.opentext.wf.tests.WFSmokeTest -->
     </classes>
